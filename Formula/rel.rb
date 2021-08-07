@@ -5,29 +5,33 @@
 class Rel < Formula
   desc "Database migration using REL"
   homepage "https://go-rel.github.io/"
-  version "v0.17.0"
+  version "0.18.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Darwin_x86_64.tar.gz"
-      sha256 "8e9b18ac4d87ddded680f44141d88769883321629ba9525eb4fa49cabbc2f9f3"
+      url "https://github.com/go-rel/rel/releases/download/v0.18.0/rel_0.18.0_Darwin_x86_64.tar.gz"
+      sha256 "4b324e6d96070d95401216174f1f0228e489612e82a50fea255d028b3018450c"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/go-rel/rel/releases/download/v0.18.0/rel_0.18.0_Darwin_arm64.tar.gz"
+      sha256 "d06b894f585a0b014f8042228b49abee8ee26ca3cb71be61dd9708f315f332cb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Linux_x86_64.tar.gz"
-      sha256 "6a19122a6a87ba44b96b49f165c5945133b4f9a2ba90516f50d29a9db92dac25"
+      url "https://github.com/go-rel/rel/releases/download/v0.18.0/rel_0.18.0_Linux_x86_64.tar.gz"
+      sha256 "bcaea97a472b9e78ad6ed67bceb8086cecaa6e0fa191f2888da85b951a2de387"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Linux_armv6.tar.gz"
-      sha256 "a4b0b275bee06d5ad1aeb41c87577dc9465d5ba6819bf6881677ab5d050e5af7"
+      url "https://github.com/go-rel/rel/releases/download/v0.18.0/rel_0.18.0_Linux_armv6.tar.gz"
+      sha256 "080230d588502fd715cf906db98c7404675ed0d43f2571a80de3f771ae9a2887"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Linux_arm64.tar.gz"
-      sha256 "53b103b9fc96c1bd7033f9f6b337a0e3069851c9cdfea908128b3d4eb56b47b9"
+      url "https://github.com/go-rel/rel/releases/download/v0.18.0/rel_0.18.0_Linux_arm64.tar.gz"
+      sha256 "11fb93434f87241a365a0ea33bf2254e5fe0a7768b00f392315f7827cc226ddd"
     end
   end
 
