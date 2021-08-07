@@ -11,8 +11,8 @@ class Rel < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Darwin_arm64.tar.gz"
-      sha256 "53b103b9fc96c1bd7033f9f6b337a0e3069851c9cdfea908128b3d4eb56b47b9"
+      url "https://github.com/go-rel/rel/releases/download/v0.17.0/rel_0.17.0_Darwin_x86_64.tar.gz"
+      sha256 "8e9b18ac4d87ddded680f44141d88769883321629ba9525eb4fa49cabbc2f9f3"
     end
   end
 
