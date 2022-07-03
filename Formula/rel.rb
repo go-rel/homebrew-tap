@@ -5,21 +5,21 @@
 class Rel < Formula
   desc "Database migration using REL"
   homepage "https://go-rel.github.io/"
-  version "0.36.0"
+  version "0.37.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/go-rel/rel/releases/download/v0.36.0/rel_0.36.0_Darwin_arm64.tar.gz"
-      sha256 "bad2cf9497280b972d23d5b3856ad8e7dfe573fa11cafba6e5ec377aee87569d"
+      url "https://github.com/go-rel/rel/releases/download/v0.37.0/rel_0.37.0_Darwin_arm64.tar.gz"
+      sha256 "ed44f2959090ccbee19f7c3d9bacfb7c86b80984166f49d0017c50247264c8dd"
 
       def install
         bin.install "rel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-rel/rel/releases/download/v0.36.0/rel_0.36.0_Darwin_x86_64.tar.gz"
-      sha256 "5e37dd7a957770b146938e185fee679c1b12329bf5512aa46007829666db8e32"
+      url "https://github.com/go-rel/rel/releases/download/v0.37.0/rel_0.37.0_Darwin_x86_64.tar.gz"
+      sha256 "1c95261623a8a1ef4cbae8a8ac9b3edeb26e9d0e860ad81f8c92072087abcc4a"
 
       def install
         bin.install "rel"
@@ -28,25 +28,25 @@ class Rel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/go-rel/rel/releases/download/v0.36.0/rel_0.36.0_Linux_armv6.tar.gz"
-      sha256 "6a51e080855af0d2cc45f708a37489e06cc8a6071d61af6aa0dc93ad69cd1cf4"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-rel/rel/releases/download/v0.37.0/rel_0.37.0_Linux_x86_64.tar.gz"
+      sha256 "c91ef24051faf2496b6f1de035aa2514b0a766871fd7ebefdb10042ef82ad476"
 
       def install
         bin.install "rel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-rel/rel/releases/download/v0.36.0/rel_0.36.0_Linux_x86_64.tar.gz"
-      sha256 "eea524cb72174a8bbe99cdc360503afee7898a34a3ce392c9fb4835b31bc5711"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/go-rel/rel/releases/download/v0.37.0/rel_0.37.0_Linux_armv6.tar.gz"
+      sha256 "04473225c3e2500a4e535abfbb82a572a8aee28dcb7e51e8548e2e070e6001d7"
 
       def install
         bin.install "rel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-rel/rel/releases/download/v0.36.0/rel_0.36.0_Linux_arm64.tar.gz"
-      sha256 "cc3b8b04e5445f8d2296efedcdacce0b47a41be107e6892b36119e7058494aa7"
+      url "https://github.com/go-rel/rel/releases/download/v0.37.0/rel_0.37.0_Linux_arm64.tar.gz"
+      sha256 "eddcf12c5eb1a1e70d1a9f561edbfda52171c29649612d2f77b709ba52f4af62"
 
       def install
         bin.install "rel"
