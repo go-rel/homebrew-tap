@@ -7,7 +7,6 @@ class Rel < Formula
   homepage "https://go-rel.github.io/"
   version "0.38.0"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
